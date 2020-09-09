@@ -11,3 +11,22 @@
       </ul>
     </div>
   <% end %>
+
+  <% if @author.errros[:name].empty? %>
+    <div class="field">
+  <% else %>
+    <div class="field_with_errors">
+  <% end %>
+    <%= label_tag "name", "Title" %>
+    <%= text_field_tag "name", @author.name %>      
+  </div>
+
+  <% if @author.erros[:email].empty? %>
+    <div class="field">
+  <% else %>
+    <div class="field_with_errors">
+  <% end %>
+      
+    </div>
+    </div>
+    </div>
