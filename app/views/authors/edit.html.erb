@@ -1,0 +1,13 @@
+<h2>Edit Author</h2>
+
+<%= form_tag author_path(@author), method: "patch" do %>
+  <% if @author.erros.any? %>
+    <div id="error_explanation">
+      <h3>There were some errors:</h3>
+      <ul>
+        <% @author.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>      
+    </div>
+  <% end %>
