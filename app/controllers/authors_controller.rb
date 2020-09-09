@@ -27,8 +27,8 @@ class AuthorsController < ApplicationController
 
      if @author.update(author_params)
        redirect_to author_path(@author)
-     else 
-       render :edit 
+     else
+       render :edit
      end
   end
 
